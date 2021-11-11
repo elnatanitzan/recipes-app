@@ -1,0 +1,44 @@
+.navbar {
+  background: #7e280e;
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.navbar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1200px;
+  max-width: 1200px;
+  min-height: 80px;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar a h1 {
+  color: #fff;
+}
+
+.navbar a:last-child {
+  color: #fff;
+  margin-left: 40px;
+  padding: 8px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.navbar a:last-child:hover {
+  background: #fff;
+  color: #333;
+}
+/*# sourceMappingURL=Navbar.css.map */
