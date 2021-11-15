@@ -26,9 +26,22 @@
       }
 
     }
-
-
   }
+
+  button {
+    display: block;
+    width: 100px;
+    font-size: .8em;
+    color: #fff;
+    padding: 8px 20px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #b90e0e;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 2rem auto;
+  }
+
   .method {
     text-align: left;
     line-height: 1.5em;
