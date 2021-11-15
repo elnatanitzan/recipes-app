@@ -1,7 +1,16 @@
-.searchbar form {
-    display: flex;
-    align-items: center;
-}
-  .searchbar input {
-    margin-left: 10px;
+.searchbar {
+  form {
+      label { visibility: hidden;}
+      input {
+        background: rgba(255, 255, 255, 0);
+        width: auto;
+        font-size: .8em;
+        padding: 5px;
+        color: #fff;
+
+        &::placeholder {
+          color: #b8b8b8;
+        }
+      }
+  }
 }

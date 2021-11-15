@@ -1,9 +1,10 @@
 .recipe-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1rem;
+    // grid-gap: 40px;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 1.5rem auto;
 
     .card {
       background: #fff;
@@ -13,7 +14,7 @@
       position: relative;
       
       &:hover {
-        transform: scale(101%);
+        transform: scale(100.2%);
         box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.05);
       }
 
@@ -29,7 +30,7 @@
 
       div {
         color: #555;
-        font-size: 0.7em;
+        font-size: 0.8em;
         margin: 20px 0;
         line-height: 1.5em;
       }
@@ -39,28 +40,20 @@
         text-decoration: none;
         display: block;
         background: #e2e2e2;
-        font-size: 0.9em;
+        font-size: 0.75em;
         width: 100px;
         text-align: center;
-        width: 120px;
+        width: fit-content;
         padding: 8px;
         border-radius: 4px;
         margin: 20px auto 0;
-      }
-
-      button {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        background: none;
-        font-size: 18px;
-        border: none;
-        cursor: pointer;
-        transition: transform .4s;
-
+        box-shadow: 0 6px 10px -4px #bbbbbb;
+        
         &:hover {
-          transform: scale(108%) rotate(180deg);
+          box-shadow: 0 6px 10px -3px #bbbbbb;
+
         }
       }
+
     }
 }

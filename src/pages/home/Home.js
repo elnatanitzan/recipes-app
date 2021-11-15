@@ -3,7 +3,7 @@ import RecipeList from '../../components/RecipeList'
 import './Home.scss';
 
 export default function Home() {
-    const { data, isPending, error } = useFetch('http://localhost:3000/recipes');
+    const { data, isPending, error } = useFetch('https://my-recipes-api-server.herokuapp.com/recipes');
     
     return (
         <div className="home">

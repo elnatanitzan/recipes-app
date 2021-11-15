@@ -1,27 +1,44 @@
 .navbar {
-    background: #7e280e;
+    background: url('./banner.jpg') no-repeat center center fixed ;
     color: #fff;
-    display: grid;
-    place-items: center;
+    width: 100%;
+    padding: .5rem;
+    text-align: center;
+    height: 7em;
+    display: flex; 
+    text-shadow: 2px 2px 5px #291818;
+
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 1200px;
-        max-width: 1200px;
-        min-height: 80px;
+        justify-content: space-around;
+        width: 100%;
+        
+        @media  (max-width: 450px) {
+            flex-direction: column;
+        }
     }
-
+    
     a {
+        margin: .5rem;
         text-decoration: none;
-        h1 { color: #fff; }
+        
+        h1 { 
+            color: #fff;
+            font-size: 1.8em;
+        }
 
         &:last-child {
             color: #fff;
-            margin-left: 40px;
-            padding: 8px;
+            padding: 3px 5px;
             border: 1px solid #fff;
             border-radius: 5px;
+            font-size: .9em;
+
+            @media  (max-width: 450px) {
+                margin-top: 1.3rem;
+            }
 
             &:hover {
                 background: #fff;
@@ -29,5 +46,4 @@
             }
         }
     }
-
 }

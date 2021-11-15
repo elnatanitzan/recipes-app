@@ -3,9 +3,16 @@ import { useFetch } from '../../hooks/useFetch'
 import './Recipe.scss'
 
 export default function Recipe() {
+    
     const { id } = useParams()
-    const url = `http://localhost:3000/recipes/${id}`
+    const url = `https://my-recipes-api-server.herokuapp.com/recipes/${id}`
     const { error, isPending, data: recipe } = useFetch(url)
+    const { deleteRecipe } = useFetch(url, 'DELETE')
+
+    const deleteThisRecipe = () => {
+        deleteRecipe(id)
+        alert('Recipe deleted!')
+    }
 
     return (
         <div className="recipe">
@@ -19,6 +26,7 @@ export default function Recipe() {
                         {recipe.ingredients.map(ing => <li key={ing}>{ing}</li>)}
                     </ul>
                     <p className="method">{recipe.method}</p>
+                    <button onClick={() =>  deleteThisRecipe()}>Delete Recipe</button>
                 </>
             )}
         </div>

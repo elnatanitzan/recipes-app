@@ -11,7 +11,7 @@ export default function Create() {
     const [ingredients, setIngredients] = useState([])
     const ingredientInput = useRef(null)
 
-    const { postData, data } = useFetch('http://localhost:3000/recipes', 'POST')
+    const { postData, data } = useFetch('https://my-recipes-api-server.herokuapp.com/recipes/', 'POST')
     const history = useHistory()
 
     const handleSubmit = (e) => {
@@ -37,7 +37,7 @@ export default function Create() {
 
     return (
         <div className="create">
-            <h2 className="page-title">Add a New Recipe</h2>
+            <h3 className="page-title">Add a New Recipe</h3>
             <form onSubmit={handleSubmit}>
                 <label>
                     <span>Recipe title:</span>
