@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import { HashRouter, Switch, Route} from 'react-router-dom';
 import './App.scss';
 import React from 'react'
 
@@ -12,7 +12,7 @@ import Search from './pages/search/Search';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
       <Navbar />
         <Switch>
           <Route exact path="/">
@@ -28,7 +28,7 @@ function App() {
             <Recipe />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
