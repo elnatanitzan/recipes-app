@@ -8,7 +8,7 @@ export default function Search() {
     const queryParams = new URLSearchParams(qureyString)
     const query = queryParams.get('q')
 
-    const url = `http://localhost:3000/recipes?q=${query}`
+    const url = `https://my-recipes-api-server.herokuapp.com/recipes?q=${query}`
     const { data, isPending, error } = useFetch(url)
 
     return (
