@@ -1,12 +1,19 @@
 .recipe-list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(270px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 1rem;
   max-width: 1200px;
   margin: auto;
   padding: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+  .recipe-list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .recipe-list .card {
