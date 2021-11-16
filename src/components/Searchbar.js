@@ -6,10 +6,8 @@ export default function Searchbar() {
     const [term, setTerm] = useState('')
     const history = useHistory();
 
-    const handleSubmit = (e) => {
-        // setTimeout(() => {     
-        // }, 500);
-        e.target.value.length === 0 ? history.push('/') : history.push(`/search?q=${term}`);
+    const handleSubmit = (e) => {       
+        e.target.value.length === 0 ? history.push('/') : setTimeout(() => { history.push(`/search?q=${term}`) }, 800);
     }
 
     return (
