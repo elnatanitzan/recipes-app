@@ -1,24 +1,25 @@
 .recipe-list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
   max-width: 1200px;
-  margin: 40px auto;
+  margin: auto;
+  padding: 1rem;
 }
 
 .recipe-list .card {
   background: #fff;
   color: #333;
-  padding: 20px;
+  padding: .8rem;
   border-radius: 4px;
-  position: relative;
+  width: 100%;
 }
 
 .recipe-list .card:hover {
-  -webkit-transform: scale(101%);
-          transform: scale(101%);
+  -webkit-transform: scale(100.2%);
+          transform: scale(100.2%);
   -webkit-box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.05);
           box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.05);
 }
@@ -35,8 +36,8 @@
 
 .recipe-list .card div {
   color: #555;
-  font-size: 0.7em;
-  margin: 20px 0;
+  font-size: 0.8em;
+  margin: 1rem auto;
   line-height: 1.5em;
 }
 
@@ -45,31 +46,21 @@
   text-decoration: none;
   display: block;
   background: #e2e2e2;
-  font-size: 0.9em;
+  font-size: 0.75em;
   width: 100px;
   text-align: center;
-  width: 120px;
-  padding: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 8px;
   border-radius: 4px;
-  margin: 20px auto 0;
+  margin: auto;
+  -webkit-box-shadow: 0 6px 10px -4px #bbbbbb;
+          box-shadow: 0 6px 10px -4px #bbbbbb;
 }
 
-.recipe-list .card button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: none;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform .4s;
-  transition: -webkit-transform .4s;
-  transition: transform .4s;
-  transition: transform .4s, -webkit-transform .4s;
-}
-
-.recipe-list .card button:hover {
-  -webkit-transform: scale(108%) rotate(180deg);
-          transform: scale(108%) rotate(180deg);
+.recipe-list .card a:hover {
+  -webkit-box-shadow: 0 6px 10px -3px #bbbbbb;
+          box-shadow: 0 6px 10px -3px #bbbbbb;
 }
 /*# sourceMappingURL=RecipeList.css.map */

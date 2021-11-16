@@ -1,16 +1,16 @@
 .searchbar {
   form {
-      label { visibility: hidden;}
-      input {
-        background: rgba(255, 255, 255, 0);
-        width: auto;
-        font-size: .8em;
-        padding: 5px;
-        color: #fff;
+    label { visibility: hidden;}
+    input {
+      background: rgba(255, 255, 255, 0);
+      width: auto;
+      font-size: .8em;
+      padding: 5px;
+      color: #fff;
 
-        &::placeholder {
-          color: #b8b8b8;
-        }
+      &::placeholder {
+        color: #b8b8b8;
       }
+    }
   }
 }

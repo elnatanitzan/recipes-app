@@ -1,9 +1,15 @@
 .navbar {
-  background: #7e280e;
+  background: url("./banner.jpg") no-repeat center center fixed;
   color: #fff;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+  width: 100%;
+  padding: .5rem;
+  text-align: center;
+  height: 9em;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-shadow: 2px 2px 5px #291818;
 }
 
 .navbar nav {
@@ -16,25 +22,42 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 1200px;
-  max-width: 1200px;
-  min-height: 80px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+@media (max-width: 450px) {
+  .navbar nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .navbar a {
+  margin: .5rem;
   text-decoration: none;
 }
 
 .navbar a h1 {
   color: #fff;
+  font-size: 1.8em;
 }
 
 .navbar a:last-child {
   color: #fff;
-  margin-left: 40px;
-  padding: 8px;
+  padding: 3px 5px;
   border: 1px solid #fff;
   border-radius: 5px;
+  font-size: .9em;
+}
+
+@media (max-width: 450px) {
+  .navbar a:last-child {
+    margin-top: 1.3rem;
+  }
 }
 
 .navbar a:last-child:hover {

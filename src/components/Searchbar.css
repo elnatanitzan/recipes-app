@@ -1,13 +1,28 @@
-.searchbar form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.searchbar form label {
+  visibility: hidden;
 }
 
-.searchbar input {
-  margin-left: 10px;
+.searchbar form input {
+  background: rgba(255, 255, 255, 0);
+  width: auto;
+  font-size: .8em;
+  padding: 5px;
+  color: #fff;
+}
+
+.searchbar form input::-webkit-input-placeholder {
+  color: #b8b8b8;
+}
+
+.searchbar form input:-ms-input-placeholder {
+  color: #b8b8b8;
+}
+
+.searchbar form input::-ms-input-placeholder {
+  color: #b8b8b8;
+}
+
+.searchbar form input::placeholder {
+  color: #b8b8b8;
 }
 /*# sourceMappingURL=Searchbar.css.map */

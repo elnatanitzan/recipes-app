@@ -1,14 +1,20 @@
 .recipe {
+  h2 { margin: .7em; }
   max-width: 1200px;
-  margin: 40px auto;
+  margin: auto;
   text-align: center;
   background: #fff;
-  padding: 40px;
+  padding: 1rem;
   box-sizing: border-box;
+
+  .time-to-cook {
+    font-weight: bold;
+  }
   
   ul {
+    font-size: .9em;
     display: flex;
-    padding: 0;
+    padding: .8em;
     justify-content: center;
     margin-top: 0;
     
@@ -24,7 +30,6 @@
       &:last-child::after {
         content: ".";
       }
-
     }
   }
 
@@ -39,7 +44,13 @@
     background-color: #b90e0e;
     cursor: pointer;
     text-decoration: none;
-    margin: 2rem auto;
+    margin: 1rem auto;
+    box-shadow: 0 3px 8px #575757;
+    
+    &:hover {
+      box-shadow: 0 2px 8px #575757;
+      transform: scale(99%);
+    }
   }
 
   .method {
