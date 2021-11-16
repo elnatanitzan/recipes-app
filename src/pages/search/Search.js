@@ -13,7 +13,7 @@ export default function Search() {
 
     return (
         <div className="search">
-            <h2 className="page-title">Recipes including "{query}"</h2>
+            <h3 className="page-title">Recipes including "{query}"</h3>
             {error && <p className="error">{error.message}</p>}
             {isPending && <p className="loading">Loading...</p>}
             {data && <RecipeList recipes={data} />}
