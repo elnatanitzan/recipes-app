@@ -7,13 +7,11 @@ export default function Searchbar() {
     const history = useHistory();
 
     const handleSearch = (e) => {
-        let timeOut;
-        if (timeOut) clearTimeout(timeOut);  
         e.target.value.length === 0
-            ? history.push('/')
-            : timeOut = setTimeout(() => {
-                history.push(`/search?q=${term}`) 
-            }, 800);
+        ? history.push('/')
+        : setTimeout(() => {
+            history.push(`/search?q=${term}`) 
+        }, 800);
     }
 
     return (
