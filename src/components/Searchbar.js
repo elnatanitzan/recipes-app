@@ -6,13 +6,19 @@ export default function Searchbar() {
     const [term, setTerm] = useState('')
     const history = useHistory();
 
-    const handleSubmit = (e) => {       
-        e.target.value.length === 0 ? history.push('/') : setTimeout(() => { history.push(`/search?q=${term}`) }, 800);
+    const handleSearch = (e) => {
+        let timeOut;
+        if (timeOut) clearTimeout(timeOut);  
+        e.target.value.length === 0
+            ? history.push('/')
+            : timeOut = setTimeout(() => {
+                history.push(`/search?q=${term}`) 
+            }, 800);
     }
 
     return (
         <div className="searchbar">
-            <form onKeyUp={handleSubmit}>
+            <form onKeyUp={handleSearch}>
                 <label htmlFor="search"></label>
                 <input
                     id="search"
